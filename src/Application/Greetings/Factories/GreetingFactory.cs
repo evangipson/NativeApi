@@ -5,7 +5,7 @@ namespace Application.Greetings.Factories;
 /// <inheritdoc cref="IGreetingFactory"/>
 public class GreetingFactory : IGreetingFactory
 {
-    private static readonly List<string> _greetings =
+    private static readonly IReadOnlyCollection<string> _greetings =
     [
         "Hello!",
         "How do you do?",
