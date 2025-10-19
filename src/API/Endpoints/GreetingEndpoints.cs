@@ -1,5 +1,5 @@
-﻿using Application.Greetings.Factories;
-using Microsoft.AspNetCore.Mvc;
+﻿using Application.Constants;
+using Domain.Extensions;
 
 namespace API.Endpoints;
 
@@ -8,6 +8,6 @@ namespace API.Endpoints;
 /// </summary>
 internal static class GreetingEndpoints
 {
-    internal static string Welcome([FromServices] IGreetingFactory greetingFactory)
-        => greetingFactory.CreateGreeting();
+    internal static string Welcome()
+        => GreetingConstants.Greetings.Random();
 }

@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Application.Numbers.Services;
-using Application.Greetings.Factories;
 
 namespace Application;
 
@@ -16,7 +15,6 @@ public static class ConfigureServices
         /// </summary>
         /// <returns>The <see cref="IServiceCollection"/>.</returns>
         public IServiceCollection AddApplicationServices() => services
-            .AddSingleton<IGreetingFactory, GreetingFactory>()
             .AddSingleton<INumberService, NumberService>();
     }
 }
